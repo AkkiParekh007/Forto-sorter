@@ -4,12 +4,9 @@
   "description": "Fast and powerful array sorting. Sort by any property in any direction with easy to read syntax.",
   "main": "dist/sort.min.js",
   "module": "dist/sort.es.js",
-  "author": "Stefan Novakovic <stefan.novakovich@gmail.com>",
-  "contributors": [
-    "Tony Gutierrez: https://github.com/tony-gutierrez"
-  ],
+  "author": "Akki Parekh <ankit.parekh@forto.com>",
   "license": "MIT",
-  "homepage": "https://github.com/snovakovic/fast-sort",
+  "homepage": "https://github.com/AkkiParekh007/Forto-sorter",
   "scripts": {
     "test": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' mocha -r ts-node/register test/*.spec.ts",
     "test:watch": "watch 'npm run test' ./src",
@@ -21,10 +18,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/snovakovic/fast-sort.git"
+    "url": "git+https://github.com/AkkiParekh007/Forto-sorter.git"
   },
   "bugs": {
-    "url": "https://github.com/snovakovic/fast-sort/issues"
+    "url": "https://github.com/AkkiParekh007/Forto-sorter/issues"
   },
   "keywords": [
     "sort",
