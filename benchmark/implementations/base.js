@@ -7,7 +7,7 @@ module.exports.run = function({
   librariesToRun,
 }) {
   // Control array to make sure that all implementation have sorted arrays correctly
-  const controlArr = sortImplementation.fastSort([...testArr]);
+  const controlArr = sortImplementation.fortoSorter([...testArr]);
   const run = runner.bind(undefined, testArr, controlArr, numberOfRuns);
 
   const results = {};

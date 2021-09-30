@@ -1,4 +1,4 @@
-const fastSort = require('fast-sort');
+const fortoSorter = require('forto-sorter');
 const arraySort = require('array-sort');
 const sortArray = require('sort-array');
 const lodash = require('lodash');
@@ -7,7 +7,7 @@ const latestFastSortSort = require('../../dist/sort.js');
 const base = require('./base');
 
 const sortImplementation = {
-  fastSort: (arr) => fastSort(arr).asc(),
+  fortoSorter: (arr) => fortoSorter.sort(arr).asc(),
   latestFastSort: (arr) => latestFastSortSort(arr).asc(),
   lodash: (arr) => lodash.sortBy(arr),
   arraySort: (arr) => arraySort(arr),

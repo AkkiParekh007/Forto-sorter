@@ -11,7 +11,7 @@ const multiProperty = require('./implementations/multiProperty.js');
 const flatArray = require('./implementations/flatArray.js');
 
 const librariesToRun = [
-  'fastSort',
+  'fortoSorter',
   // 'latestFastSort',
   'lodash',
   'arraySort',
@@ -34,18 +34,18 @@ function getRowValue(name, run) {
     return chalk.red('NOT SUPPORTED');
   }
 
-  const fastSort = run.fastSort.average;
+  const fortoSorter = run.fortoSorter.average;
   const lib = run[name].average;
   let comparison = '';
-  if (fastSort !== lib) {
-    const color = fastSort < lib ? 'red' : 'green';
-    const comparedTofastSort = (Math.max(fastSort, lib) / Math.min(fastSort, lib)).toFixed(2);
-    comparison = chalk[color](`${fastSort < lib ? '↓' : '↑'} ${comparedTofastSort}x `);
+  if (fortoSorter !== lib) {
+    const color = fortoSorter < lib ? 'red' : 'green';
+    const comparedTofastSort = (Math.max(fortoSorter, lib) / Math.min(fortoSorter, lib)).toFixed(2);
+    comparison = chalk[color](`${fortoSorter < lib ? '↓' : '↑'} ${comparedTofastSort}x `);
     comparison = `(${comparison})`;
   }
 
   const result = `${run[name].average.toFixed(4)}ms ${comparison}`;
-  return name === 'fastSort'
+  return name === 'fortoSorter'
     ? chalk.blue(result)
     : result;
 }
@@ -53,7 +53,7 @@ function getRowValue(name, run) {
 function addRow(libName, result, table) {
   const value = getRowValue.bind(null, libName);
 
-  if (libName === 'fastSort') libName = chalk.blue(libName);
+  if (libName === 'fortoSorter') libName = chalk.blue(libName);
   table.push([libName, ...result.map((r) => value(r))]);
 }
 

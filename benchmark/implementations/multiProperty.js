@@ -1,4 +1,4 @@
-const fastSort = require('fast-sort');
+const fortoSorter = require('forto-sorter');
 const arraySort = require('array-sort');
 const lodash = require('lodash');
 const sortArray = require('sort-array');
@@ -8,7 +8,7 @@ const getRandomInt = require('../getRandomInt');
 const base = require('./base');
 
 const sortImplementation = {
-  fastSort: (arr) => fastSort(arr).asc([
+  fortoSorter: (arr) => fortoSorter.sort(arr).asc([
     (p) => p.am1,
     (p) => p.am2,
   ]),
