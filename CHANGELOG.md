@@ -12,9 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Default export has been replaced with named exports
 
 ```javascript
-import sort from 'fast-sort'; // older versions
+import sort from 'forto-sorter'; // older versions
 
-import { sort } from 'fast-sort'; // v3 and up
+import { sort } from 'forto-sorter'; // v3 and up
 ```
 
 * By default `sort` no longer mutates array as was case in previous versions it now creates new array instance.
@@ -22,7 +22,7 @@ import { sort } from 'fast-sort'; // v3 and up
 * `sort.createNewInstance` is now provided as named export
 
 ```javascript
-import { createNewSortInstance } from 'fast-sort';
+import { createNewSortInstance } from 'forto-sorter';
 ```
 
 ### Added
@@ -47,7 +47,7 @@ import { createNewSortInstance } from 'fast-sort';
   });
 ```
 * TypeScript support
-* more info on this release on https://github.com/snovakovic/fast-sort/releases/tag/v2.0.0
+* more info on this release on https://github.com/AkkiParekh007/Forto-sorter/releases/tag/v2.0.0
 
 ## [1.6.0]
 
