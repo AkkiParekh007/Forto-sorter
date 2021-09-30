@@ -1,6 +1,6 @@
 {
   "name": "forto-sorter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scope": "akkiparekh007",
   "description": "Fast and powerful array sorting. Sort by any property in any direction with easy to read syntax.",
   "main": "dist/sort.min.js",
