@@ -50,13 +50,6 @@ Fore more examples check [unit tests](https://github.com/AkkiParekh007/Forto-sor
   * Packed with features in small footprint with 0 dependencies (~ 850 bytes gzip)
   * Compatible with any JS environment as Node, Web, etc..
 
-## Migrating from older versions
-
-Documentation for v2 and older versions is available [here](https://github.com/AkkiParekh007/Forto-sorter/blob/v2/README.md).
-
-
-For migrating to v3 you can reference [CHANGELOG](https://github.com/AkkiParekh007/Forto-sorter/blob/master/CHANGELOG.md) for what has been changed.
-
 ## In place sorting
 
 By default `sort` does not mutate provided array it creates new "sorted" instance of array. `inPlaceSort` on other hand mutates provided array by sorting it without creating new array instance. Benefits of `inPlaceSort` is that it's slightly faster and more generous on memory as it's not creating new array instance every time sorting is done. Other than that there is no difference between using one or another.
