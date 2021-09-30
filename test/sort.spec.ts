@@ -246,8 +246,8 @@ describe('sort', () => {
       { name: 'bb', lastName: 'aa' },
       { name: 'aa', lastName: 'aa' },
       { name: 'aa', lastName: 'bb' },
-      { name: 'aa', lastName: null },
       { name: 'aa', lastName: undefined },
+      { name: 'aa', lastName: null },
     ]);
   });
 
@@ -605,10 +605,10 @@ describe('sort', () => {
     });
 
     const sorter1 = nilSort(multiPropArray).asc(p => p.lastName);
-    assert.deepStrictEqual(['aa', 'aa', 'bb', null, undefined], sorter1.map(p => p.lastName));
+    assert.deepStrictEqual(['aa', 'aa', 'bb', undefined, null], sorter1.map(p => p.lastName));
 
     const sorter2 = nilSort(multiPropArray).desc(p => p.lastName);
-    assert.deepStrictEqual([undefined, null, 'bb', 'aa', 'aa'], sorter2.map(p => p.lastName));
+    assert.deepStrictEqual([null, undefined, 'bb', 'aa', 'aa'], sorter2.map(p => p.lastName));
 
     // By default custom sorter should not mutate provided array
     assert.notEqual(sorter1, multiPropArray);
