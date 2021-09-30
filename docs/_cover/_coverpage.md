@@ -7,5 +7,5 @@
 - For list of all available features check highlights section.
 
 
-[GitHub](https://github.com/docsifyjs/docsify/)
+[GitHub](https://github.com/AkkiParekh007/Forto-sorter)
 [Get Started](/installation)
