@@ -12,7 +12,7 @@ Benchmark has been run on:
   * Ubuntu 16.04
   * Node 8.9.1
 
-![benchmark results](https://github.com/AkkiParekh007/Forto-sorter/raw/master/benchmark.jpg)
+![benchmark results](https://github.com/AkkiParekh007/Forto-sorter/raw/main/benchmark.jpg)
 
 #### Running benchmark
 
