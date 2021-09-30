@@ -1,21 +1,11 @@
-# fast-sort
-
-[![Start](https://img.shields.io/github/stars/snovakovic/fast-sort?style=flat-square)](https://github.com/snovakovic/fast-sort/stargazers)
-[![Total Downloads](https://img.shields.io/npm/dt/fast-sort.svg)](https://www.npmjs.com/package/fast-sort)
-[![Known Vulnerabilities](https://snyk.io/test/github/snovakovic/fast-sort/badge.svg)](https://snyk.io/test/github/snovakovic/fast-sort)
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
-[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
-
-[![NPM Package](https://nodei.co/npm/fast-sort.png)](https://www.npmjs.com/package/fast-sort)
+# forto-sorter
 
 Fast easy to use and flexible sorting with TypeScript support.
-For speed comparison of `fast-sort` vs other popular sort libraries check [benchmark](#benchmark) section.
+For speed comparison of `forto-sorter` vs other popular sort libraries check [benchmark](#benchmark) section.
 For list of all available features check [highlights](#highlights) section.
 
-## Quick examples
-
 ```javascript
-  import { sort } from 'fast-sort';
+  import { sort } from 'forto-sorter';
 
   // Sort flat arrays
   const ascSorted = sort([1,4,2]).asc(); // => [1, 2, 4]
@@ -44,7 +34,7 @@ For list of all available features check [highlights](#highlights) section.
   const sorted = sort(users).asc('firstName');
 ```
 
-Fore more examples check [unit tests](https://github.com/snovakovic/fast-sort/blob/master/test/sort.spec.ts).
+Fore more examples check [unit tests](https://github.com/AkkiParekh007/Forto-sorter/blob/master/test/sort.spec.ts).
 
 ## Highlights
 
@@ -62,17 +52,17 @@ Fore more examples check [unit tests](https://github.com/snovakovic/fast-sort/bl
 
 ## Migrating from older versions
 
-Documentation for v2 and older versions is available [here](https://github.com/snovakovic/fast-sort/blob/v2/README.md).
+Documentation for v2 and older versions is available [here](https://github.com/AkkiParekh007/Forto-sorter/blob/v2/README.md).
 
 
-For migrating to v3 you can reference [CHANGELOG](https://github.com/snovakovic/fast-sort/blob/master/CHANGELOG.md) for what has been changed.
+For migrating to v3 you can reference [CHANGELOG](https://github.com/AkkiParekh007/Forto-sorter/blob/master/CHANGELOG.md) for what has been changed.
 
 ## In place sorting
 
 By default `sort` does not mutate provided array it creates new "sorted" instance of array. `inPlaceSort` on other hand mutates provided array by sorting it without creating new array instance. Benefits of `inPlaceSort` is that it's slightly faster and more generous on memory as it's not creating new array instance every time sorting is done. Other than that there is no difference between using one or another.
 
 ```javascript
-const { sort, inPlaceSort } = require('fast-sort');
+const { sort, inPlaceSort } = require('forto-sorter');
 
 const array = [3, 1, 5];
 const sorted = sort(array).asc();
@@ -87,18 +77,18 @@ inPlaceSort(array).asc();
 
 ## Natural sorting / Language sensitive sorting
 
-By default `fast-sort` is not doing language sensitive sorting of strings.
+By default `forto-sorter` is not doing language sensitive sorting of strings.
 e.g `'image-11.jpg'` will be sorted before `'image-2.jpg'` (in ascending sorting).
-We can provide custom [Intl.Collator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator) comparer to fast-sort for language sensitive sorting of strings.
+We can provide custom [Intl.Collator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator) comparer to forto-sorter for language sensitive sorting of strings.
 Keep in mind that natural sort is slower then default sorting so recommendation is to use it
 only when needed.
 
 ```javascript
-  import { sort, createNewSortInstance } from 'fast-sort';
+  import { sort, createNewSortInstance } from 'forto-sorter';
 
   const testArr = ['image-2.jpg', 'image-11.jpg', 'image-3.jpg'];
 
-  // By default fast-sort is not doing natural sort
+  // By default forto-sorter is not doing natural sort
   sort(testArr).desc(); // => ['image-3.jpg', 'image-2.jpg', 'image-11.jpg']
 
   // We can use `by` sort to override default comparer
@@ -129,7 +119,7 @@ Fast sort can be tailored to fit any sorting need or use case by:
 For example we will sort `tags` by "custom" tag importance (e.g `vip` tag is of greater importance then `captain` tag).
 
 ```javascript
-  import { sort, createNewSortInstance } from 'fast-sort';
+  import { sort, createNewSortInstance } from 'forto-sorter';
 
   const tags = ['influencer', 'unknown', 'vip', 'captain'];
   const tagsImportance = { // Domain specific tag importance
@@ -161,7 +151,7 @@ For example we will sort `tags` by "custom" tag importance (e.g `vip` tag is of 
   sort(null).asc(); // => null
   sort(33).desc(); // => 33
 
-  // By default fast-sort sorts null and undefined values to the
+  // By default forto-sorter sorts null and undefined values to the
   // bottom no matter if sorting is in asc or decs order.
   // If this is not intended behaviour you can check "Should create sort instance that sorts nil value to the top in desc order" test on how to override
   const addresses = [{ city: 'Split' }, { city: undefined }, { city: 'Zagreb'}];
@@ -171,7 +161,7 @@ For example we will sort `tags` by "custom" tag importance (e.g `vip` tag is of 
 
 ## Benchmark
 
-Five different benchmarks have been created to get better insight of how fast-sort perform under different scenarios.
+Five different benchmarks have been created to get better insight of how forto-sorter perform under different scenarios.
 Each benchmark is run with different array sizes raging from small 100 items to large 100 000 items.
 
 Every run of benchmark outputs different results but the results are constantly showing better scores compared to similar popular sorting libraries.
@@ -185,16 +175,16 @@ Benchmark has been run on:
   * Ubuntu 16.04
   * Node 8.9.1
 
-![benchmark results](https://github.com/snovakovic/fast-sort/raw/master/benchmark.jpg)
+![benchmark results](https://github.com/AkkiParekh007/Forto-sorter/raw/master/benchmark.jpg)
 
 #### Running benchmark
 
 To run benchmark on your PC follow steps from below
 
-1) git clone https://github.com/snovakovic/fast-sort.git
-2) cd fast-sort/benchmark
+1) git clone https://github.com/AkkiParekh007/Forto-sorter.git
+2) cd forto-sorter/benchmark
 3) npm install
 4) npm start
 
 In case you notice any irregularities in benchmark or you want to add sort library to benchmark score
-please open issue [here](https://github.com/snovakovic/fast-sort)
+please open issue [here](https://github.com/AkkiParekh007/Forto-sorter)

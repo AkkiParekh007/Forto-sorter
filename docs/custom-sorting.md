@@ -7,7 +7,7 @@ Fast sort can be tailored to fit any sorting need or use case by:
 For example we will sort `tags` by "custom" tag importance (e.g `vip` tag is of greater importance then `captain` tag).
 
 ```javascript
-  import { sort, createNewSortInstance } from 'fast-sort';
+  import { sort, createNewSortInstance } from 'Forto-sorter';
 
   const tags = ['influencer', 'unknown', 'vip', 'captain'];
   const tagsImportance = { // Domain specific tag importance

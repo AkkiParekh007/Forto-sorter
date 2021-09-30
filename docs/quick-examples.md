@@ -28,4 +28,4 @@
   const sorted = sort(users).asc('firstName');
 ```
 
-Fore more examples check [unit tests](https://github.com/snovakovic/fast-sort/blob/master/test/sort.spec.ts).
+Fore more examples check [unit tests](https://github.com/AkkiParekh007/Forto-sorter/blob/master/test/sort.spec.ts).
