@@ -9,12 +9,12 @@ export default {
     {
       file: 'dist/sort.js',
       format: 'umd',
-      name: 'fast-sort',
+      name: 'forto-sorter',
     },
     {
       file: 'dist/sort.min.js',
       format: 'umd',
-      name: 'fast-sort',
+      name: 'forto-sorter',
       plugins: [uglify({})],
     },
     {
