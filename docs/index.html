@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Forto-sorter - a dependency-free notification library</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta name="keywords" content="notification, library, opensource, open, source">
+		<meta name="author" content="Ankit Parekh">
+		<link rel="stylesheet" href="_assets/docs.css">
+		<link rel="stylesheet" href="_assets/vue.css">
+		<link rel="stylesheet" href="_assets/ps-icon-pack.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700|Zilla+Slab:300,400,600,700|Fira+Mono" rel="stylesheet">
+		<link rel="stylesheet" href="//cdn.rawgit.com/needim/noty/77268c46/lib/noty.css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">		
+	</head>
+	<body>
+	  	<div id="app">Please wait...</div>
+	</body>
+
+	<script>	
+	window.$docsify = {
+		name          : '',
+		logo          : '_media/forto-logo.svg',
+		coverpage	  : '_cover/_coverpage.md',
+		onlyCover     : true,
+		auto2top      : true,
+		loadSidebar   : true,
+		maxLevel      : 4,
+		subMaxLevel   : 3,
+		themeColor    : '#FF75ED',
+		executeScript : true,
+		loadNavbar    : true,
+		autoHeader    : true,
+		mergeNavbar   : true,
+		formatUpdated : '{MM}/{DD} {HH}:{mm}',
+		ga            : 'UA-46744044-1',
+		plugins: [
+			function (hook, vm) {
+				hook.beforeEach(function (html) {
+				var url = 'https://github.com/needim/noty/blob/master/docs/' + vm.route.file
+				var editHtml = '<a class="edit-this-page" href="' + url + '">Edit this page on GitHub<\/a>\n'
+				var footer = [ '']
+				return html
+					+ '\n----\n'
+					+ 'Last modified {docsify-updated} '
+					+ editHtml
+					+ '\n----\n'
+					+ footer.join('')
+				})
+			},
+
+			function (hook, vm) {
+				hook.doneEach(function () {
+					try {
+
+						if (vm.route.path === '/') {(function (d, script) {
+							script = d.createElement('script')
+							script.type = 'text/javascript'
+							script.async = true
+							script.setAttribute('id', 'gh-buttons')
+							script.onload = function () { }
+								script.src = 'https://buttons.github.io/buttons.js'
+								d.getElementsByTagName('head')[0].appendChild(script)
+							}(document));
+						}
+
+						if (vm.route.path === '/themes') {
+							console.log("wow")
+							RenderPreviews()
+						}
+					}
+					catch (err) { }
+				})
+			}
+		]
+	}
+	</script>
+	<script src="_assets/docsify.js"></script>
+	<script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
+	<script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+	<script src="//unpkg.com/docsify/lib/plugins/external-script.min.js"></script>
+	<script src="//unpkg.com/docsify/lib/plugins/ga.min.js"></script>
+	<script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>	
+</html>

@@ -1,21 +1,7 @@
-# fast-sort
-
-[![Start](https://img.shields.io/github/stars/snovakovic/fast-sort?style=flat-square)](https://github.com/snovakovic/fast-sort/stargazers)
-[![Total Downloads](https://img.shields.io/npm/dt/fast-sort.svg)](https://www.npmjs.com/package/fast-sort)
-[![Known Vulnerabilities](https://snyk.io/test/github/snovakovic/fast-sort/badge.svg)](https://snyk.io/test/github/snovakovic/fast-sort)
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
-[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
-
-[![NPM Package](https://nodei.co/npm/fast-sort.png)](https://www.npmjs.com/package/fast-sort)
-
-Fast easy to use and flexible sorting with TypeScript support.
-For speed comparison of `fast-sort` vs other popular sort libraries check [benchmark](#benchmark) section.
-For list of all available features check [highlights](#highlights) section.
-
 ## Quick examples
 
 ```javascript
-  import { sort } from 'fast-sort';
+  import { sort } from 'forto-sorter';
 
   // Sort flat arrays
   const ascSorted = sort([1,4,2]).asc(); // => [1, 2, 4]
@@ -59,13 +45,6 @@ Fore more examples check [unit tests](https://github.com/snovakovic/fast-sort/bl
   * TypeScript support
   * Packed with features in small footprint with 0 dependencies (~ 850 bytes gzip)
   * Compatible with any JS environment as Node, Web, etc..
-
-## Migrating from older versions
-
-Documentation for v2 and older versions is available [here](https://github.com/snovakovic/fast-sort/blob/v2/README.md).
-
-
-For migrating to v3 you can reference [CHANGELOG](https://github.com/snovakovic/fast-sort/blob/master/CHANGELOG.md) for what has been changed.
 
 ## In place sorting
 
@@ -191,10 +170,10 @@ Benchmark has been run on:
 
 To run benchmark on your PC follow steps from below
 
-1) git clone https://github.com/snovakovic/fast-sort.git
-2) cd fast-sort/benchmark
-3) npm install
-4) npm start
+- git clone https://github.com/snovakovic/fast-sort.git
+- cd fast-sort/benchmark
+- npm install
+- npm start
 
 In case you notice any irregularities in benchmark or you want to add sort library to benchmark score
-please open issue [here](https://github.com/snovakovic/fast-sort)
+Please open issue<small style="margin: 0 0.25rem">[here](https://github.com/snovakovic/fast-sort)</small>
